@@ -1,7 +1,13 @@
 const express = require('express');
+const path = require('path');
 const { router } = require('./router');
 const { notFoundError, errorHanler } = require('./router/errorHandler');
 const app = express();
+
+
+// Set options
+app.set('view engin' , 'pug');    // Set pug template engin 
+app.set('view' , path.join(__dirname , 'view'));    // Set path views.
 
 
 // Middleware options.
