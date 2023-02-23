@@ -1,3 +1,5 @@
+
+// Error handler for not found.
 const notFoundError = (req, res, next) => {
     return res.status(404).json({
         statusCode : 404,
@@ -5,10 +7,12 @@ const notFoundError = (req, res, next) => {
     });
 };
 
+
+// Get my error or manual error expres.
 const errorHanler = (err, req, res, next) => {
     return res.json({
-        statusCode : err.status || 500,
-        message : req.message || 'Internal server error',
+        statusCode : err.statusCode || 500,
+        message : err.message || 'Internal server error',
     });
 };
 
