@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/static/css/style.css")
+        title Pug Template Engine
+    body 
+        div 
+            header 
+                h2 Pug template engine.
+            section 
+                h2 My section of web page.
+                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, pariatur.
+                hr
+                h2.liColor Users: 
+                    ul 
+                        each user in users 
+                            li #{user.name + ' ' + user.lastName}
+                hr
+            foter 
+                h3.red footer section 
+                p
+                    a(href='//google.com' , target="_blink") Google
+            

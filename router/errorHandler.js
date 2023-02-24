@@ -10,6 +10,7 @@ const notFoundError = (req, res, next) => {
 
 // Get my error or manual error expres.
 const errorHanler = (err, req, res, next) => {
+    console.log(err)
     return res.json({
         statusCode : err.statusCode || 500,
         message : err.message || 'Internal server error',

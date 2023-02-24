@@ -5,14 +5,16 @@ const { notFoundError, errorHanler } = require('./router/errorHandler');
 const app = express();
 
 
-// Set options
-app.set('view engin' , 'pug');    // Set pug template engin 
-app.set('view' , path.join(__dirname , 'view'));    // Set path views.
-
 
 // Middleware options.
 app.use(express.json());    // body-parser for json.
 app.use(express.urlencoded({extends : true}));    // body-parser urlencoded.
+app.use('/static', express.static('public'));    // Set static file directory.
+
+// Set views options.
+app.set('view engine' , 'pug');    // Set pug template engin 
+app.set('views' , path.join(__dirname, 'views'));    // Set path views.
+
 
 
 app.use(router);    // All router in server.
