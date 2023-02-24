@@ -14,11 +14,21 @@ html(lang="en")
                 h2 My section of web page.
                 p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, pariatur.
                 hr
-                h2.liColor Users: 
+                h2.liColor Each object in array : 
                     ul 
                         each user in users 
                             li #{user.name + ' ' + user.lastName}
                 hr
+
+                h2 Each array :
+                    each val in [1,2,3,4,5,6,7]
+                        p #{val} 
+                hr
+
+                h2 Each object :
+                    each value, key in {One : 'Amrihossein' , Two : 'Milad' }
+                        p  #{key} : #{value}
+
             foter 
                 h3.red footer section 
                 p
