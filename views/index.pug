@@ -4,12 +4,17 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/static/css/style.css")
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
         title Pug Template Engine
+        link(rel="stylesheet", href="/static/css/style.css")
+
     body 
         div 
+            include partials/_nav
             header 
                 h2 Pug template engine.
+                a.btn Default Link Button
+                a.bin-info Amirhossein
             section 
                 h2 My section of web page.
                 p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, pariatur.
@@ -33,4 +38,15 @@ html(lang="en")
                 h3.red footer section 
                 p
                     a(href='//google.com' , target="_blink") Google
+
+
+            include partials/_footer
+    
             
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js'
+    integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous')
+    
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+           integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous')
+    
